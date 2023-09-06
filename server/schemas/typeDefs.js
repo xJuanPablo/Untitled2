@@ -13,10 +13,29 @@ const typeDefs = gql`
   
   type Fountain {
     _id: ID
-    location: String
-    createdAt: String
+    address: String
+    datePosted: String
+    image: String
+    postAuthor: String
   }
-  `
+
+  type Auth {
+    token: ID!
+    user: User
+  }
+
+  type Query {
+    users: [User]
+    fountains: [Fountain]
+    me: User
+  }
+
+  type Mutation {
+    addUser(username: String!, email: String!, password: String!): Auth
+    login(email: String!, password: String!): Auth
+    addFountain(address: String!, image: String!): Fountain
+  }
+`
 
 module.exports = typeDefs;
 
