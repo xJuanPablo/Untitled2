@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
 
+// TODO: need virtual for logged in user's saved fountains (check out social network api challenge for reference)
 const userSchema = new Schema({
   username: {
     type: String,
