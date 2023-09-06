@@ -1,3 +1,56 @@
+/* basic elements of the css for the web application */
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+body{
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+}
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+p, a, li, button, ul{
+  margin:0;
+  padding:0;
+  line-height: normal;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+img{
+  width:100%;
+  height:auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .App {
   text-align: center;
 }
