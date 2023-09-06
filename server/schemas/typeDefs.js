@@ -8,7 +8,7 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
-    thoughts: [Thought]!
+    fountains: [Fountain]!
   }
   
   type Fountain {
