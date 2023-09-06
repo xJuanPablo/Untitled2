@@ -14,7 +14,12 @@ const fountainSchema = new Schema({
   },
   image: {
     type: String,
+    required: true,
     trim: true
+  },
+  postAuthor: {
+    type: String,
+    trim: true,
   }
 });
 
