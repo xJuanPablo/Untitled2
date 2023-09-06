@@ -1,8 +1,8 @@
 import React from 'react';
 import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap';
 
-
-function App() {
+// instead of function use this syntax way, in line 5
+export const Signup = () =>{
     return (
         <div>
           <Container>
