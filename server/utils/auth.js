@@ -1,8 +1,9 @@
 //This imports the 'jsonwebtoken' mode
 const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
 //This defines a secret key
-const secret = 'mysecretsshhhhh';
+const secret = process.env.SECRET;
 // This is the expiration time for the JWTs
 const expiration = '2h';
 
@@ -36,9 +37,9 @@ module.exports = {
     return req;
   },
   //This function generates a new JWT token based on user data.
-  signToken: function ({ firstName, email, _id }) {
+  signToken: function ({ username, email, _id }) {
     // User data to include in the token
-    const payload = { firstName, email, _id };
+    const payload = { username, email, _id };
 
     // Create and return a new JWT token
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
