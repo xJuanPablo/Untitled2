@@ -5,16 +5,6 @@ import logo from '../assets/img/LOGObackGround.jpg';
 
 
 
-
-
-
-
-
-
-
-
-
-
 export const NavBar = () =>{
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
