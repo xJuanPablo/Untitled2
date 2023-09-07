@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://root:Deltaforc1@cluster0.dns4ylm.mongodb.net/untitled2');
+mongoose.connect(process.env.MONGODB_URI || `${process.env.MONGO_CONNECT}untitled2`);
 
 module.exports = mongoose.connection;
