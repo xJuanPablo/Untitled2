@@ -1,6 +1,7 @@
 //import logo from './logo.svg';
 import {NavBar} from './components/navbar';
 import { Signup } from './components/signup';
+import { Home } from './components/home';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -9,7 +10,8 @@ function App() {
     <div className="App">
       {/* components will go here */}
       <NavBar />
-      <Signup />
+      <Signup />    
+      <Home />
     </div>
   );
 }
