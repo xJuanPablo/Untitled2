@@ -5,12 +5,27 @@ import { BottomSheet } from 'react-spring-bottom-sheet'
 // <link rel="stylesheet" href="https://unpkg.com/react-spring-bottom-sheet/dist/style.css" crossorigin="anonymous">
 import 'react-spring-bottom-sheet/dist/style.css'
 
-export default function Example() {
-  const [open, setOpen] = useState(false)
-  return (
-    <>
-      <button onClick={() => setOpen(true)}>Open</button>
-      <BottomSheet open={open}>My awesome content here</BottomSheet>
-    </>
-  )
-}
+export default function SlideUp() {
+    const [open, setOpen] = useState(false);
+  
+    return (
+      <>
+        <div className="main">
+          MAIN CONTENT
+          <button onClick={() => setOpen(!open)}>
+            {open ? "CLOSE" : "OPEN"} SHEET
+          </button>
+        </div>
+        <div className="footer">YOUR MAIN FOOTER</div>
+        <BottomSheet
+          open={open}
+          onDismiss={() => setOpen(false)}
+          header={<div className="sheetHeader">SHEET HEADER</div>}
+          snapPoints={({ maxHeight }) => 0.9 * maxHeight}
+          sibling={<div className="sheetFooter">YOUR MAIN FOOTER</div>}
+        >
+          <div className="sheetBody">SHEET BODY</div>
+        </BottomSheet>
+      </>
+    );
+  }
