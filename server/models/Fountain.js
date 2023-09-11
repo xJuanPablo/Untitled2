@@ -3,27 +3,27 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const fountainSchema = new Schema({
-  latitude: {
-    type: String,
+  lat: {
+    type: Number,
     required: true
   },
-  longitude: {
-    type: String,
+  lng: {
+    type: Number,
     required: true
   },
-  Address: {
+  address: {
     type: String,
     required: true,
     trim: true,
   },
-  Place: {
+  place: {
     type: String,
   },
-  City: {
+  city: {
     type: String,
     required: true
   },
-  State: {
+  state: {
     type: String,
     required: true
 
@@ -32,7 +32,7 @@ const fountainSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  Image: {
+  image: {
     type: String,
     required: true,
     trim: true
