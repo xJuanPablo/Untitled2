@@ -14,8 +14,8 @@ const typeDefs = gql`
   
   type Fountain {
     _id: ID
-    lat: INT
-    long: INT
+    lat: Int
+    long: Int
     address: String
     datePosted: String
     image: String

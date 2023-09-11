@@ -3,16 +3,35 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const fountainSchema = new Schema({
-  address: {
+  latitude: {
+    type: String,
+    required: true
+  },
+  longitude: {
+    type: String,
+    required: true
+  },
+  Address: {
     type: String,
     required: true,
     trim: true,
+  },
+  Place: {
+    type: String,
+  },
+  City: {
+    type: String,
+    required: true
+  },
+  State: {
+    type: String,
+    required: true
   },
   datePosted: {
     type: Date,
     default: Date.now
   },
-  image: {
+  Image: {
     type: String,
     required: true,
     trim: true
