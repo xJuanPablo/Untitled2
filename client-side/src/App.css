@@ -201,13 +201,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* bottom sheet css */
 :root {
-  --rsbs-handle-bg: #4b4b4b;
+  --rsbs-handle-bg: #fcfbfb;
   --rsbs-max-w: auto;
   --rsbs-ml: env(safe-area-inset-left);
   --rsbs-mr: env(safe-area-inset-right);
   --rsbs-antigap-scale-y: 0;
   --rsbs-backdrop-bg: rgba(0, 0, 0, 0);
-  --rsbs-bg: #171717;
+  --rsbs-bg: #575454;
   --rsbs-backdrop-opacity: 1;
   --rsbs-content-opacity: 1;
   --rsbs-overlay-h: 0px;

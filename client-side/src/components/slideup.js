@@ -34,7 +34,7 @@ export default function SlideUp() {
           </div>
         }
         snapPoints={({ maxHeight }) => {
-          const popHeight = 780; // Adjust the pop height as needed
+          const popHeight = 800; // Adjust the pop height as needed
           return [maxHeight - popHeight, maxHeight - 200]; // Set the pop and bottom gap heights
         }}
       >
