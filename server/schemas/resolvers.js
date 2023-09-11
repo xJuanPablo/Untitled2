@@ -22,7 +22,7 @@ const resolvers = {
     },
     // GETs all fountains from database
     fountains: async () => {
-      return await Fountain.find();
+      return Fountain.find({});
     },
     // GETs context user and uploaded fountains
     me: async (parent, args, context) => {
@@ -58,7 +58,7 @@ const resolvers = {
       return { token, user };
     },
     // POSTs new Fountain
-    addFountain: async (parent, { address, img, lat, lng, address, place, city, state, postAuthor }, context) => {
+    addFountain: async (parent, { address, img, lat, lng, place, city, state, postAuthor }, context) => {
       if (context.user) {
         const fountain = await Fountain.create({
           lat,
@@ -102,4 +102,4 @@ const resolvers = {
   }
 }
 
-module.export = resolvers;
+module.exports = resolvers;
