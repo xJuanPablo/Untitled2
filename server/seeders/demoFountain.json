@@ -1,92 +1,92 @@
 [
   {
-  "latitude": 30.282310,
-  "longitude": -97.720480,
-  "Address": "2100 Alamo St, Austin, TX 78722",
-  "Place": "Alamo Pocket Park",
-  "City": "Austin",
-  "State": "Tx",
-  "Image": "Picture pending"
+  "lat": 30.282310,
+  "lng": -97.720480,
+  "address": "a100 Alamo St, Austin, TX 78722",
+  "place": "Alamo Aocket Park",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture Pending"
 },
 {
-  "latitude": 30.275210,
-  "longitude": -97.771460,
-  "Address": "Ann and Roy Butler Hike and Bike Trail, Austin, TX 78703",
-  "Place": "Eilers (Deep Eddy) Neighborhood Park Trail",
-  "City": "Austin",
-  "State": "Tx",
-  "Image": "Picture pending"
+  "lat": 30.275210,
+  "lng": -97.771460,
+  "address": "Ann and Roy Butler Hike and Bike Trail, Austin, TX 78703",
+  "place": "Eilers (Deep Eddy) Neighborhood Park Trail",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
 },
 {
-  "latitude": 30.276910,
-  "longitude": -97.757650,
-  "Address": "1317 W 10th St, Austin, TX 78703",
-  "Place": "West Austin Neighborhood Park",
-  "City": "Austin",
-  "State": "Tx",
-  "Image": "Picture pending"
+  "lat": 30.276910,
+  "lng": -97.757650,
+  "address": "1317 W 10th St, Austin, TX 78703",
+  "place": "West Austin Neighborhood Park",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
 },
 {
-  "latitude": 30.402170,
-  "longitude": -97.683630,
-  "Address": "12138 N Lamar Blvd, Austin, TX 78753",
-  "Place": "Walnut Creek Metropolitan Park",
-  "City": "Austin",
-  "State": "Tx",
-  "Image": "Picture pending"
+  "lat": 30.402170,
+  "lng": -97.683630,
+  "address": "12138 N Lamar Blvd, Austin, TX 78753",
+  "place": "Walnut Creek Metropolitan Park",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
 },
 {
-  "latitude": 30.266010,
-  "longitude": -97.743920,
-  "Address": "316 Congress Ave., Austin, TX 78701",
-  "Place": "Patagonia",
-  "City": "Austin",
-  "State": "Tx",
-  "Image": "Picture pending"
+  "lat": 30.266010,
+  "lng": -97.743920,
+  "address": "316 Congress Ave., Austin, TX 78701",
+  "place": "Patagonia",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
 },
 {
-  "latitude": 30.300090,
-  "longitude": -97.702530,
-  "Address": "2006 Philomena St, Austin, TX 78723",
-  "Place": "Mary Elizabeth Branch Park",
-  "City": "Austin",
-  "State": "Tx",
-  "Image": "Picture pending"
+  "lat": 30.300090,
+  "lng": -97.702530,
+  "address": "2006 Philomena St, Austin, TX 78723",
+  "place": "Mary Elizabeth Branch Park",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
 },
 {
-  "latitude": 30.307210,
-  "longitude": -97.727900,
-  "Address": "4400 Avenue G, Austin, TX 78751",
-  "Place": "Shipe Neighborhood Park",
-  "City": "Austin",
-  "State": "Tx",
-  "Image": "Picture pending"
+  "lat": 30.307210,
+  "lng": -97.727900,
+  "address": "4400 Avenue G, Austin, TX 78751",
+  "place": "Shipe Neighborhood Park",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
 },
 {
-  "latitude": 30.261840,
-  "longitude": -97.750790,
-  "Address": "762 W Riverside Dr, Austin, Tx 78704",
-  "Place": "Auditorium Shores at Town Lake Metropolitan Park",
-  "City": "Austin",
-  "State": "Tx",
-  "Image": "Picture pending"
+  "lat": 30.261840,
+  "lng": -97.750790,
+  "address": "762 W Riverside Dr, Austin, Tx 78704",
+  "place": "Auditorium Shores at Town Lake Metropolitan Park",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
 },
 {
-  "latitude": 30.259470,
-  "longitude": -97.691000,
-  "Address": "5200 Bolm Rd, Austin, TX 78721",
-  "Place": "Govalle Neighborhood Park",
-  "City": "Austin",
-  "State": "Tx",
-  "Image": "Picture pending"
+  "lat": 30.259470,
+  "lng": -97.691000,
+  "address": "5200 Bolm Rd, Austin, TX 78721",
+  "place": "Govalle Neighborhood Park",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
 },
 {
-  "latitude": 30.162470,
-  "longitude": -97.807670,
-  "Address": "907 W Slaughter Ln, Austin, TX 78748",
-  "Place": "30.16247° N, 97.80767° W",
-  "City": "Austin",
-  "State": "Tx",
-  "Image": "Picture pending"
+  "lat": 30.162470,
+  "lng": -97.807670,
+  "address": "907 W Slaughter Ln, Austin, TX 78748",
+  "place": "30.16247° N, 97.80767° W",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
 }
 ]
