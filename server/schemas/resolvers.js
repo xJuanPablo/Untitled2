@@ -27,7 +27,7 @@ const resolvers = {
     // GETs context user and uploaded fountains
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user_id }).populate('fountains');
+        return User.findOne({ _id: context.user._id }).populate('fountains').populate('saved');
       }
       throw new AuthenticationError('You need to be logged in');
     },
@@ -58,17 +58,17 @@ const resolvers = {
       return { token, user };
     },
     // POSTs new Fountain
-    addFountain: async (parent, { address, img, place, city, state }, context) => {
+    addFountain: async (parent, { address, place, city, state }, context) => {
       if (context.user) {
         const fountain = await Fountain.create({
           address,
           place,
           city,
           state,
-          img: {
-            data: fs.readFileSync(path.join(__dirname + '/uploads/' + img)),
-            contentType: 'image/png'
-          },
+          // img: {
+          //   data: fs.readFileSync(path.join(__dirname + '/uploads/' + img)),
+          //   contentType: 'image/png'
+          // },
           postAuthor: context.user.username,
         });
 
@@ -82,20 +82,17 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in');
     },
     saveFountain: async (parent, { fountainId }, context ) => {
-      if (!context.user) {
-        throw new AuthenticationError('You must be logged in');
+      if (context.user) {
+        const fountain = await Fountain.findById({ _id: fountainId });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { saved: fountain._id }}
+        );
+  
+        return fountain;
       }
-
-      const fountain = await Fountain.findById(fountainId);
-      if (!fountain) {
-        throw new Error('Fountain not found');
-      }
-
-      context.user.saved.push(fountainId);
-
-      await context.user.save();
-
-      return fountain;
+      throw new AuthenticationError('You need to be logged in');
     }
   }
 }
