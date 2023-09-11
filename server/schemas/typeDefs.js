@@ -14,14 +14,14 @@ const typeDefs = gql`
   
   type Fountain {
     _id: ID
-    lat: Int
-    lng: Int
-    address: String
+    lat: String
+    lng: String
+    address: String!
     place: String
-    city: String
-    state: String
+    city: String!
+    state: String!
     datePosted: String
-    img: String
+    img: String!
     postAuthor: String
   }
 
@@ -40,6 +40,7 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addFountain(address: String!, image: String!): Fountain
+    saveFountain(fountainId: Int!): Fountain
   }
 `
 
