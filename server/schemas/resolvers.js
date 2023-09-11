@@ -1,6 +1,18 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Fountain } = require('../models');
 const { signToken } = require('../utils/auth');
+const multer = require('multer');
+
+var storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'uploads')
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.fieldname + '-' + Date.now())
+    }
+});
+
+const upload = multer({ storage: storage });
 
 const resolvers = {
   Query: {
@@ -46,11 +58,19 @@ const resolvers = {
       return { token, user };
     },
     // POSTs new Fountain
-    addFountain: async (parent, { address, image }, context) => {
+    addFountain: async (parent, { address, img, lat, lng, address, place, city, state, postAuthor }, context) => {
       if (context.user) {
         const fountain = await Fountain.create({
+          lat,
+          lng,
           address,
-          image,
+          place,
+          city,
+          state,
+          img: {
+            data: fs.readFileSync(path.join(__dirname + '/uploads/' + img)),
+            contentType: 'image/png'
+          },
           postAuthor: context.user.username,
         });
 
