@@ -33,6 +33,7 @@ const typeDefs = gql`
   type Query {
     users: [User]
     fountains: [Fountain]
+    fountain(fountainId: ID!): Fountain
     me: User
   }
 
