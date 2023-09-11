@@ -5,13 +5,15 @@ import 'react-spring-bottom-sheet/dist/style.css'
 
 export default function SlideUp() {
   const [open, setOpen] = useState(true);
+
+  // Define your popHeight
+  const popHeight = 670; // Adjust the pop height as needed
+
   return (
     <>
       <BottomSheet className='slideup'
+      blocking = {false}
         open={open}
-        // had to change setOpen to true in order for bottom sheet to not go all the way down
-        // original version had setOpen set to false
-        onDismiss={() => setOpen(true)}
         header={
           <div className="sheetHeader">SHEET HEADER
             <Container className="mt-5">
@@ -34,8 +36,7 @@ export default function SlideUp() {
           </div>
         }
         snapPoints={({ maxHeight }) => {
-          const popHeight = 800; // Adjust the pop height as needed
-          return [maxHeight - popHeight, maxHeight - 200]; // Set the pop and bottom gap heights
+          return [maxHeight - popHeight, maxHeight - 200];
         }}
       >
         <div className="sheetBody">SHEET BODY</div>
