@@ -26,6 +26,7 @@ const fountainSchema = new Schema({
   State: {
     type: String,
     required: true
+
   },
   datePosted: {
     type: Date,
