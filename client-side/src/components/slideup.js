@@ -4,7 +4,7 @@ import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import 'react-spring-bottom-sheet/dist/style.css'
 
 export default function SlideUp() {
-  const [open, setOpen] = useState(true);
+  const [open] = useState(true);
 
   // Define your popHeight
   const popHeight = 670; // Adjust the pop height as needed
