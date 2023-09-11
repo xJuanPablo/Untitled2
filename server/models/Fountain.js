@@ -32,7 +32,7 @@ const fountainSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  image: {
+  img: {
     type: String,
     required: true,
     trim: true
