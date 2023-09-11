@@ -36,7 +36,7 @@ const fountainSchema = new Schema({
   },
   img: {
     type: String,
-    required: true,
+    // required: true,
     trim: true
   },
   // added postAuthor to link with context user when adding a fountain
