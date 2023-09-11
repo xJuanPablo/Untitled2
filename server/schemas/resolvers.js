@@ -62,6 +62,22 @@ const resolvers = {
         return fountain;
       }
       throw new AuthenticationError('You need to be logged in');
+    },
+    saveFountain: async (parent, { fountainId }, context ) => {
+      if (!context.user) {
+        throw new AuthenticationError('You must be logged in');
+      }
+
+      const fountain = await Fountain.findById(fountainId);
+      if (!fountain) {
+        throw new Error('Fountain not found');
+      }
+
+      context.user.saved.push(fountainId);
+
+      await context.user.save();
+
+      return fountain;
     }
   }
 }

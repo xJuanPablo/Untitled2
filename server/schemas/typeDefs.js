@@ -9,14 +9,17 @@ const typeDefs = gql`
     email: String
     password: String
     fountains: [Fountain]!
-    saved: [Saves]!
+    saved: [Fountain]!
   }
   
   type Fountain {
     _id: ID
-    lat: INT
-    long: INT
+    lat: Int
+    long: Int
     address: String
+    place: String
+    city: String
+    state: String
     datePosted: String
     image: String
     postAuthor: String
