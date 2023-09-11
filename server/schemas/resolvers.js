@@ -24,6 +24,9 @@ const resolvers = {
     fountains: async () => {
       return Fountain.find({});
     },
+    fountain: async (parent, { fountainId }) => {
+      return Fountain.findOne({ _id: fountainId });
+    },
     // GETs context user and uploaded fountains
     me: async (parent, args, context) => {
       if (context.user) {
