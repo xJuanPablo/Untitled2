@@ -1,3 +1,7 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+
 import {NavBar} from './components/navbar';
 // import { Home } from './components/home';
 // import React, { useState } from "react";
