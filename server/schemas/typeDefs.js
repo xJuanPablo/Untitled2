@@ -21,7 +21,7 @@ const typeDefs = gql`
     city: String
     state: String
     datePosted: String
-    image: String
+    img: String
     postAuthor: String
   }
 
