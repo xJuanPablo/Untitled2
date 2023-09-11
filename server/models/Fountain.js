@@ -5,11 +5,11 @@ const { Schema } = mongoose;
 const fountainSchema = new Schema({
   lat: {
     type: String,
-    required: true
+    trim: true,
   },
   lng: {
     type: String,
-    required: true
+    trim: true,
   },
   address: {
     type: String,
@@ -18,15 +18,17 @@ const fountainSchema = new Schema({
   },
   place: {
     type: String,
+    trim: true,
   },
   city: {
     type: String,
-    required: true
+    required: true,
+    trim: true,
   },
   state: {
     type: String,
-    required: true
-
+    required: true,
+    trim: true,
   },
   datePosted: {
     type: Date,
