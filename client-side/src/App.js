@@ -12,8 +12,8 @@ function App() {
     <div className="App">
       <NavBar />
       {/* was testing map :D */}
-      {/* <Map/> */}
-      <Signup />
+      <Map/>
+      {/* <Signup /> */}
       <SlideUp />
     </div>
   );
