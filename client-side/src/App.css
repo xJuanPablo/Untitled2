@@ -212,7 +212,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   --rsbs-content-opacity: 1;
   --rsbs-overlay-h: 0px;
   --rsbs-overlay-rounded: 16px;
-  --rsbs-overlay-translate-y: 0px;
 }
 
 .sheetHeader {
@@ -233,16 +232,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 
-
+/* should be something in here to fix the bottom sheet */
 [data-rsbs-overlay] {
   border-top-left-radius: var(--rsbs-overlay-rounded, 16px);
   border-top-right-radius: var(--rsbs-overlay-rounded, 16px);
   display: flex;
   background: var(--rsbs-bg, #fff);
   flex-direction: column;
-  height: var(--rsbs-overlay-h, 0px);
-  transform: translate3d(0, var(--rsbs-overlay-translate-y, 0px), 0);
-  will-change: height;
 }
 
 [data-rsbs-overlay]:focus {
