@@ -58,11 +58,9 @@ const resolvers = {
       return { token, user };
     },
     // POSTs new Fountain
-    addFountain: async (parent, { address, img, lat, lng, place, city, state, postAuthor }, context) => {
+    addFountain: async (parent, { address, img, place, city, state }, context) => {
       if (context.user) {
         const fountain = await Fountain.create({
-          lat,
-          lng,
           address,
           place,
           city,
