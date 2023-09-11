@@ -215,24 +215,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   --rsbs-overlay-translate-y: 0px;
 }
 
-.main {
-  border: 1px solid black;
-  height: calc(93vh - 3px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.footer {
-  width: 98vw;
-  height: calc(7vh - 3px);
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .sheetHeader {
   display: flex;
   justify-content: center;
@@ -250,20 +232,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border: 1px solid white;
 }
 
-.sheetFooter {
-  position: absolute;
-  bottom: 1px;
-  left: calc(1vw - 1px);
-  z-index: 4;
-  width: 98vw;
-  height: calc(7vh - 3px);
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  background: white;
-}
+
 
 [data-rsbs-overlay] {
   border-top-left-radius: var(--rsbs-overlay-rounded, 16px);
