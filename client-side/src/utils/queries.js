@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client'
 
+
 export const QUERY_USERS = gql`
   query users {
     users {
@@ -12,16 +13,18 @@ export const QUERY_USERS = gql`
 `;
 
 export const QUERY_FOUNTAINS = gql`
-  query fountains{
-    fountains {
-      _id
-      lat
-      lng
-      address
-      place
-      city
-      state
-      img
-    }
+query fountains {
+  fountains {
+    _id
+    lat
+    lng
+    address
+    place
+    city
+    state
+    datePosted
+    img
+    postAuthor
   }
+}
 `;

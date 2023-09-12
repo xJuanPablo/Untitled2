@@ -1,26 +1,18 @@
 import React from 'react';
-import { Button, Modal } from 'react-bootstrap';
+// import {NavBar} from './components/navbar';
+import { Map } from './Map';
+import SlideUp from './slideup';
+// import '../App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const Home = () => {
   return (
-    <div
-      className="modal show"
-      style={{ display: 'block', position: 'initial' }}
-    >
-      <Modal.Dialog>
-        <Modal.Header closeButton>
-          <Modal.Title>WET Access</Modal.Title>
-        </Modal.Header>
-
-        <Modal.Body>
-          <p>WET would like to access your location</p>
-        </Modal.Body>
-
-        <Modal.Footer>
-          <Button variant="secondary">Close</Button>
-          <Button variant="primary">Save changes</Button>
-        </Modal.Footer>
-      </Modal.Dialog>
+    <div className='Home'>
+  
+      <Map />
+      <SlideUp />
     </div>
   );
 }
+
+export default Home;

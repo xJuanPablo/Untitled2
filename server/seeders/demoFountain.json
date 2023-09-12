@@ -84,8 +84,112 @@
   "lat": 30.162470,
   "lng": -97.807670,
   "address": "907 W Slaughter Ln, Austin, TX 78748",
-  "place": "30.16247° N, 97.80767° W",
+  "place": "Mary Moore Searight Metropolitan Park",
   "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.292250,
+  "lng": -97.702889,
+  "address": "2029 McCloskey St, Austin, TX 78723",
+  "place": "Ella Wooten Park",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
+},
+{
+  "lat": 30.403340,
+  "lng": -97.722270,
+  "address": "North Burnet-Gateway, Austin, TX 78758",
+  "place": "The Domain",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.277060,
+  "lng": -97.717010,
+  "address": "2207 E 16th St, Austin, TX 78702",
+  "place": "Chestnut Pocket Park",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.249370,  "lng": -97.735450,
+  "address": "Riverside, Austin, TX 78741",
+  "place": "Lady Bird Lake Boardwalk",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.245750,
+  "lng": -97.726940,
+  "address": "1820 S Lakeshore Blvd, Austin, TX 78741",
+  "place": "Ann and Roy Butler Hike and Bike Trail",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.272560,
+  "lng": -97.739400,
+  "address": "112 E 11th St, Austin, TX 78701",
+  "place": "Texas Capitol Visitors Center",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.447230,
+  "lng": -97.624240,
+  "address": "Gilleland Creek Trail, Pflugerville, TX 78660",
+  "place": "Pfluger Park",
+  "city": "Pflugerville",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.443340,
+  "lng": -97.566090,
+  "address": "Lake Pflugerville Trail, Pflugerville, TX 78660",
+  "place": "Lake Pflugerville Park",
+  "city": "Pflugerville",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.458560,
+  "lng": -97.585840,
+  "address": "18720 Falcon Pointe Blvd, Pflugerville, TX 78660",
+  "place": "Central Park",
+  "city": "Pflugerville",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.465330,
+  "lng": -97.582050,
+  "address": "19015 Falcon Pointe Blvd, Pflugerville, TX 78660",
+  "place": "Falcon Pointe Recreation Center",
+  "city": "Pflugerville",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.532280,
+  "lng": -97.629770,
+  "address": "901 Harrell Pkwy, Round Rock, TX 78665",
+  "place": "Old Settlers Park",
+  "city": "Round Rock",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.587970,
+  "lng": -97.878180,
+  "address": "1100 Halsey Dr, Leander, TX 78641",
+  "place": "Benbrook Disc Golf Course",
+  "city": "Leander",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.494260,
+  "lng": -97.807240,
+  "address": "204 E Little Elm Trail, Cedar Park, TX 78613",
+  "place": "Twin Lakes Park",
+  "city": "Cedar Park,",
   "state": "Tx",
   "img": "Picture pending"
 }
