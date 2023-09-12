@@ -1,20 +1,26 @@
 import Webcam from 'react-webcam';
-import {useRef} from 'react';
+import { useRef, useState } from 'react';
 
 export const Cam = () => {
   const webRef = useRef(null);
-  let img = "httpsL;';'";
-  const showImage = () =>{
-   img = webRef.current.getScreenshot();
+  const [img, setImage] = useState(null);
+
+  const showImage = () => {
+    const screenshot = webRef.current.getScreenshot();
+    setImage(screenshot);
   };
-    return (
-        <div className='Camera'>
-          <Webcam  ref={webRef}/>
-          <button onClick={()=>{
-            showImage()
-          }}>SNAP</button>
-          <br/>
-          <img src={img} />
-        </div>
-    );
-  }
+
+  return (
+    <div className="Cam">
+      React Webcam
+      <Webcam
+        audio={false}
+        ref={webRef}
+        screenshotFormat="image/jpeg" // Set the screenshot format
+      />
+      <button onClick={showImage}>Show Image</button>
+      <br />
+      {img && <img src={img} alt="Screenshot" />}
+    </div>
+  );
+};
