@@ -10,6 +10,11 @@ import SlideUp from './components/slideup';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+const client = new ApolloClient({
+  url: '/graphql',
+  cache : new InMemoryCache(),
+});
+
 function App() {
   return (
     <ApolloProvider client = {client}>
