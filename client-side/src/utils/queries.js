@@ -1,24 +1,24 @@
 import { gql } from '@apollo/client'
 
 export const QUERY_FOUNTAINS = gql`
-  query getFountains {
-    fountains {
-      _id
-      lat
-      lng
-      address
-      place
-      city
-      state
-      datePosted
-      img
-      postAuthor
-    }
+query fountains {
+  fountains {
+    _id
+    lat
+    lng
+    address
+    place
+    city
+    state
+    datePosted
+    img
+    postAuthor
   }
+}
 `;
 
 export const QUERY_SINGLE_FOUNTAIN = gql`
-  query getSingleFountain($fountainId: ID!) {
+  query fountain($fountainId: ID!) {
     fountain(fountainId: $fountainId) {
       _id
       lat

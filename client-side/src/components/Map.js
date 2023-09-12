@@ -4,18 +4,19 @@ import { useQuery } from '@apollo/client';
 import { QUERY_FOUNTAINS } from "../utils/queries";
 
 export const Map = () => {
-  const { loading, data } = useQuery(QUERY_FOUNTAINS);
   
-  const markers = data?.fountains || [];
-
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY || '',
   });
-
+  
   const [mapRef, setMapRef] = useState();
   const [isOpen, setIsOpen] = useState(false);
   const [infoWindowData, setInfoWindowData] = useState();
-
+  const { loading, data } = useQuery(QUERY_FOUNTAINS);
+  
+  const markers = data?.fountains || [];
+  console.log(markers.length);
+  
   const center = useMemo(() => ({ lat: 30.274761622222364, lng: -97.74004407567682 }), []);
 
   // const markers = [
@@ -27,7 +28,11 @@ export const Map = () => {
   const onMapLoad = (map) => {
     setMapRef(map);
     const bounds = new google.maps.LatLngBounds();
-    markers?.forEach(({ lat, lng }) => bounds.extend({ lat, lng }));
+    markers?.forEach(({ lat, lng }) => {
+      const latt = parseFloat(lat)
+      const lon = parseFloat(lng) 
+      bounds.extend({ latt, lon }
+      )});
     map.fitBounds(bounds);
   };
 
@@ -39,7 +44,7 @@ export const Map = () => {
 
   return (
     <div className="Map">
-      {!isLoaded ? (
+      {!isLoaded && markers.length === 0 ? (
         <h1>Loading...</h1>
       ) : (
         <GoogleMap
@@ -49,14 +54,15 @@ export const Map = () => {
           zoom={10}
           onClick ={()=>setIsOpen(false)}
         >
-          {markers.map(({address, lat, lng }, i) => (
+          {markers.map((item, i) => (
             <MarkerF 
             key={i}
-            position={{ lat: lat, lng: lng }} 
+            position={{ lat: parseFloat(item.lat), lng: parseFloat(item.lng) }} 
             icon={"http://maps.google.com/mapfiles/ms/icons/blue-dot.png"} 
             onClick={() => {
-              handleMarkerClick(i, lat, lng, address);
-            }}>
+              handleMarkerClick(i, parseFloat(item.lat), parseFloat(item.lng), item.address);
+            }}
+            >
               {isOpen && infoWindowData?.id === i && (
                 <InfoWindowF
                   onCloseClick={() => {
