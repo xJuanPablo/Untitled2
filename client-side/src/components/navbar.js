@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react";
 import{Navbar, Nav, Container} from "react-bootstrap";
-import logo from '../assets/img/LOGObackGround.jpg';
-
+import logo from '../assets/img/DrakeWet.jpg';
+import {Cam} from './cam.js'
 import Auth from '../utils/auth'
 
 
@@ -56,6 +56,7 @@ export const NavBar = () =>{
             <span className="navbar-text">
                 <a href="#">
                 <button className="vvd" onClick={()=> console.log('connect')}><span>Add new location</span></button>
+                <Cam />
                 </a>
             </span>
           </Navbar.Collapse>
