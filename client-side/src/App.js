@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
 import {NavBar} from './components/navbar';
-// import { Home } from './components/home';
+import { Home } from './components/home';
 // import React, { useState } from "react";
 import { Map } from './components/Map';
 import SlideUp from './components/slideup';
@@ -23,7 +23,7 @@ function App() {
           <Routes>
             <Route
               path = "/"
-              element = {<NavBar />}
+              element = {<Home />}
             />
             <Route
               path = "/components"

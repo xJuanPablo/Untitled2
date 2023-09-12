@@ -1,8 +1,7 @@
 import React from 'react';
-import {NavBar} from './components/navbar';
-import { Map } from './components/Map';
-import SlideUp from './components/slideup';
-import './App.css';
+import {NavBar} from './navbar';
+import { Map } from './Map';
+import SlideUp from './slideup';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const Home = () => {
