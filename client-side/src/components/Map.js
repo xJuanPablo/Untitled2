@@ -5,20 +5,19 @@ import { QUERY_FOUNTAINS } from "../utils/queries";
 
 // const google = window.google;
 export const Map = () => {
-
-
   
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY || '',
   });
-  
+
   const [mapRef, setMapRef] = useState();
   const [isOpen, setIsOpen] = useState(false);
   const [infoWindowData, setInfoWindowData] = useState();
+    
   const { loading, data } = useQuery(QUERY_FOUNTAINS);
   
   const markers = data?.fountains || [];
-  console.log(markers.length);
+  console.log(markers);
   
   const center = useMemo(() => ({ lat: 30.274761622222364, lng: -97.74004407567682 }), []);
 
@@ -27,6 +26,7 @@ export const Map = () => {
   //   { lat: 30.274761622222364, lng: -97.74004407567682, address: "Address2" },
   //   { lat: 30.2673, lng: -97.7318, address: "Address3" },
   // ];
+
 
   const onMapLoad = (map) => {
     setMapRef(map);

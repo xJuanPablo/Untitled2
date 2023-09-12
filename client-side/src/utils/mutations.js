@@ -37,7 +37,7 @@ export const ADD_FOUNTAIN = gql`
       city
       state
       datePosted
-      img
+      image
       postAuthor
     }
   }
@@ -54,7 +54,7 @@ export const SAVE_FOUNTAIN = gql`
       city
       state
       datePosted
-      img
+      image
       postAuthor
     }
   }

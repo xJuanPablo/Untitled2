@@ -24,7 +24,10 @@ const resolvers = {
     },
     // GETs all fountains from database
     fountains: async () => {
-      return Fountain.find({});
+      console.log("Fountain");
+      const fountainData = await Fountain.find({});
+      console.log(fountainData);
+      return fountainData;
     },
     fountain: async (parent, { fountainId }) => {
       return Fountain.findOne({ _id: fountainId });
