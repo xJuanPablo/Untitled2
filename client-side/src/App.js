@@ -22,7 +22,7 @@ function App() {
         <div className="App">
           <Routes>
             <Route
-              path = "/components"
+              path = "/"
               element = {<NavBar />}
             />
             <Route
@@ -36,8 +36,7 @@ function App() {
           </Routes>
         </div>
       </Router>
-    </ApolloProvider>
-    
+    </ApolloProvider>    
 )}
 
 export default App;
