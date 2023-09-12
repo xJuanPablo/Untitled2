@@ -3,7 +3,10 @@ import { useMemo, useState } from "react";
 import { useQuery } from '@apollo/client';
 import { QUERY_FOUNTAINS } from "../utils/queries";
 
+// const google = window.google;
 export const Map = () => {
+
+
   
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY || '',
@@ -27,7 +30,7 @@ export const Map = () => {
 
   const onMapLoad = (map) => {
     setMapRef(map);
-    const bounds = new google.maps.LatLngBounds();
+    const bounds = new window.google.maps.LatLngBounds();
     markers?.forEach(({ lat, lng }) => {
       const latt = parseFloat(lat)
       const lon = parseFloat(lng) 
