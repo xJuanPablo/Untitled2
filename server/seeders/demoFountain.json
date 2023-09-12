@@ -136,5 +136,61 @@
   "city": "Austin",
   "state": "Tx",
   "img": "Picture pending"
+},{
+  "lat": 30.447230,
+  "lng": -97.624240,
+  "address": "Gilleland Creek Trail, Pflugerville, TX 78660",
+  "place": "Pfluger Park",
+  "city": "Pflugerville",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.443340,
+  "lng": -97.566090,
+  "address": "Lake Pflugerville Trail, Pflugerville, TX 78660",
+  "place": "Lake Pflugerville Park",
+  "city": "Pflugerville",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.458560,
+  "lng": -97.585840,
+  "address": "18720 Falcon Pointe Blvd, Pflugerville, TX 78660",
+  "place": "Central Park",
+  "city": "Pflugerville",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.465330,
+  "lng": -97.582050,
+  "address": "19015 Falcon Pointe Blvd, Pflugerville, TX 78660",
+  "place": "Falcon Pointe Recreation Center",
+  "city": "Pflugerville",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.532280,
+  "lng": -97.629770,
+  "address": "901 Harrell Pkwy, Round Rock, TX 78665",
+  "place": "Old Settlers Park",
+  "city": "Round Rock",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.587970,
+  "lng": -97.878180,
+  "address": "1100 Halsey Dr, Leander, TX 78641",
+  "place": "Benbrook Disc Golf Course",
+  "city": "Leander",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.494260,
+  "lng": -97.807240,
+  "address": "204 E Little Elm Trail, Cedar Park, TX 78613",
+  "place": "Twin Lakes Park",
+  "city": "Cedar Park,",
+  "state": "Tx",
+  "img": "Picture pending"
 }
 ]
