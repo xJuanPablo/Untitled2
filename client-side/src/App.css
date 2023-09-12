@@ -20,7 +20,6 @@ p, a, li, button, ul{
   line-height: normal;
   text-decoration: none !important;
   list-style: none;
-  color: rgb(204, 204, 204) !important;
 }
 
 a:hover{
