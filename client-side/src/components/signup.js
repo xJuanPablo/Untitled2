@@ -23,7 +23,7 @@ export const Signup = () => {
 
     try {
       const { data } = await addUser({
-        variables: { ...userData}
+        variables: { ...userData }
       });
 
       Auth.login(data.addUser.token);
@@ -73,7 +73,7 @@ export const Signup = () => {
                           </Form.Group> */}
 
                       <div className="d-grid">
-                        <Button variant="primary" type="submit" onClick={handleSubmit}>
+                        <Button variant="primary" type="submit" >
                           Create Account
                         </Button>
                       </div>
