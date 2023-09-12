@@ -18,6 +18,9 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Login } from './components/login';
 import {Signup} from './components/signup';
+import {Cam} from './components/cam';
+import Webcam from 'react-webcam';
+import {WaterBottle} from './components/loading';
 
 
 // Construct our main GraphQL API endpoint
@@ -53,7 +56,7 @@ function App() {
           <Routes>
             <Route
               path = "/"
-              element = {<Home />}
+              element = {<WaterBottle />}
             />
             <Route
               path = "/login"

@@ -1,37 +1,50 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
+export const WaterBottle = () => {
+  const [currentPercentage, setCurrentPercentage] = useState(0);
+  const [showOptions, setShowOptions] = useState(false);
 
-class WaterBottle extends component{
-    componentDidMount(){
-        const water = document.querySelector(".water");
-        const fillLevel = document.querySelector(".fill-level");
+  useEffect(() => {
+    const water = document.querySelector(".water");
+    const fillLevel = document.querySelector(".fill-level");
 
-        water.style.animation = "fillWater 5s forwards";
+    water.style.animation = "fillWater 5s forwards";
 
-        let currentPercentage = 0;
+    const interval = setInterval(() => {
+      setCurrentPercentage((prevPercentage) => {
+        const newPercentage = prevPercentage + 1;
+        if (newPercentage === 100) {
+          clearInterval(interval);
+          setShowOptions(true); // Show options when the animation completes
+        }
+        return newPercentage;
+      });
+    }, 50);
 
-        const interval = setInterval(function (){
-            currentPercentage++;
-            fillLevel.textContent = currentPercentage + "%";
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
-            if (currentPercentage === 100){
-                clearInterval(interval);
-            }
-        }, 50);
-    }
-    render(){
-        return (
-            <div className="water-bottle">
-            <div className="bottle-body">
-              <div className="water">
-                <span className="fill-level">0%</span>
-              </div>
-              <div className="bottle-neck"></div>
-              <div className="bottle-cap"></div>
-            </div>
+  return (
+    <div className="containerbottle">
+      <div className="water-bottle">
+        <div className="bottle-body">
+          <div className="water">
+            <span className="fill-level">{currentPercentage}%</span>
           </div>
-        )
-    }
-}
-
-export default WaterBottle;
+          <div className="bottle-neck"></div>
+          <div className="bottle-cap"></div>
+        </div>
+      </div>
+      {showOptions && (
+        <div className="options-box">
+          <p>Choose an option:</p>
+          <button className="option-button">Continue as Guest</button>
+          <button className="option-button">Login</button>
+          <button className="option-button">Register</button>
+        </div>
+      )}
+    </div>
+  );
+};
