@@ -84,7 +84,55 @@
   "lat": 30.162470,
   "lng": -97.807670,
   "address": "907 W Slaughter Ln, Austin, TX 78748",
-  "place": "30.16247° N, 97.80767° W",
+  "place": "Mary Moore Searight Metropolitan Park",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.292250,
+  "lng": -97.702889,
+  "address": "2029 McCloskey St, Austin, TX 78723",
+  "place": "Ella Wooten Park",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
+},
+{
+  "lat": 30.403340,
+  "lng": -97.722270,
+  "address": "North Burnet-Gateway, Austin, TX 78758",
+  "place": "The Domain",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.277060,
+  "lng": -97.717010,
+  "address": "2207 E 16th St, Austin, TX 78702",
+  "place": "Chestnut Pocket Park",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.249370,  "lng": -97.735450,
+  "address": "Riverside, Austin, TX 78741",
+  "place": "Lady Bird Lake Boardwalk",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.245750,
+  "lng": -97.726940,
+  "address": "1820 S Lakeshore Blvd, Austin, TX 78741",
+  "place": "Ann and Roy Butler Hike and Bike Trail",
+  "city": "Austin",
+  "state": "Tx",
+  "img": "Picture pending"
+},{
+  "lat": 30.272560,
+  "lng": -97.739400,
+  "address": "112 E 11th St, Austin, TX 78701",
+  "place": "Texas Capitol Visitors Center",
   "city": "Austin",
   "state": "Tx",
   "img": "Picture pending"
