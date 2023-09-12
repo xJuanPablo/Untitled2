@@ -21,7 +21,7 @@ const typeDefs = gql`
     city: String!
     state: String!
     datePosted: String
-    img: String
+    image: String
     postAuthor: String
   }
 
@@ -41,7 +41,7 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
 
-    addFountain(address: String!, place: String, city: String!, state: String!): Fountain
+    addFountain(address: String!, place: String, city: String!, state: String!, image: String): Fountain
     saveFountain(fountainId: ID!): Fountain
   }
 `

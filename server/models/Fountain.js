@@ -34,10 +34,9 @@ const fountainSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  img: {
-    type: String,
-    // required: true,
-    trim: true
+  image: {
+    data: Buffer,
+    contentType: String
   },
   // added postAuthor to link with context user when adding a fountain
   postAuthor: {
