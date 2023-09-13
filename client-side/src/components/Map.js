@@ -5,6 +5,7 @@ import { QUERY_FOUNTAINS } from "../utils/queries";
 import SlideUp from './slideup';
 import { BottomSheet } from 'react-spring-bottom-sheet'
 import { Button, Col, Container, Card, Form, Row } from "react-bootstrap";
+import 'react-spring-bottom-sheet/dist/style.css'
 
 export const Map = () => {
   const mapRef = useRef(null)
