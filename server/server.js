@@ -25,8 +25,11 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // sets up route for the root URL
+// app.get('/', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../client-side/public/index.html'));
+// });
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client-side/public/index.html'));
+  res.sendFile(path.join(__dirname, '../client-side/build/index.html'));
 });
 
 
