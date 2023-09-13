@@ -2,6 +2,9 @@ import { GoogleMap, MarkerF, InfoWindowF, useLoadScript } from "@react-google-ma
 import { useMemo, useState, useRef, useEffect } from "react";
 import { useQuery } from '@apollo/client';
 import { QUERY_FOUNTAINS } from "../utils/queries";
+import SlideUp from './slideup';
+import { BottomSheet } from 'react-spring-bottom-sheet'
+import { Button, Col, Container, Card, Form, Row } from "react-bootstrap";
 
 export const Map = () => {
   const mapRef = useRef(null)
@@ -70,6 +73,13 @@ export const Map = () => {
     setPosition(newPos)
   };
 
+  const [open] = useState(true);
+  // const [markedFountains, setMarkedFountains] = useState([]);
+
+  const cards = data?.fountains || [];
+
+  const popHeight = 670;
+
   return (
     <div className="Map">
       {!isLoaded && markers.length === 0 ? (
@@ -104,6 +114,62 @@ export const Map = () => {
           ))}
         </GoogleMap>
       )}
+      <>
+      <BottomSheet className='slideup'
+      blocking = {false}
+        open={open}
+        header={
+          <div className="sheetHeader">SHEET HEADER
+            <Container className="mt-5">
+              <Row>
+                <Col sm={4}>
+                  <Form className="d-flex">
+                    <Form.Control
+                      type="search"
+                      placeholder="Search"
+                      className="me-2"
+                      aria-label="Search"
+                    />
+                    <Button>
+                      Search
+                    </Button>
+                  </Form>
+                </Col>
+              </Row>
+            </Container>
+          </div>
+        }
+        snapPoints={({ maxHeight }) => {
+          return [maxHeight - popHeight, maxHeight - 200];
+        }}
+      >
+        <div className="sheetBody">
+        {cards.map(({_id, place, address}) => {
+          return (
+          <Col md="4">
+            <Card key={_id} border='dark'>
+              <Card.Body>
+                <Card.Title>{address}</Card.Title>
+                <Card.Text>{place}</Card.Text>
+                {/* {Auth.loggedIn() && (
+                  <Button
+                    disabled={savedBookIds?.some((savedBookId) => savedBookId === book.bookId)}
+                    className='btn-block btn-info'
+                    onClick={() => handleSaveBook(book.bookId)}>
+                    {savedBookIds?.some((savedBookId) => savedBookId === book.bookId)
+                      ? 'This book has already been saved!'
+                      : 'Save this Book!'}
+                  </Button>
+                )} */}
+              </Card.Body>
+            </Card>
+          </Col>
+          )
+        })}
+        </div>
+      </BottomSheet>
+    </>
+    <SlideUp isOpen = {isOpen} data = {infoWindowData} onClose = {() => setIsOpen(false)} />
     </div>
   );
 };
