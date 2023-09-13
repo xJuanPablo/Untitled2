@@ -80,7 +80,7 @@ export const Map = () => {
           onLoad={onMapLoad}
           onDragEnd={handleCenter}
           center={position}
-          zoom={12}
+          zoom={13.5}
           onClick={() => setIsOpen(false)}
         >
           {markers.map((item, i) => (

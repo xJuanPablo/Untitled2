@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { BottomSheet } from 'react-spring-bottom-sheet'
-import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { Button, Col, Container, Card, Form, Row } from "react-bootstrap";
 import 'react-spring-bottom-sheet/dist/style.css'
 // these imports of line 6 and 7 are to take data from api to populate into the bottomsheet
 import { useQuery } from '@apollo/client';
@@ -9,10 +9,10 @@ import { QUERY_FOUNTAINS } from "../utils/queries";
 
 export default function SlideUp() {
   const [open] = useState(true);
+  // const [markedFountains, setMarkedFountains] = useState([]);
+
   const { loading, data } = useQuery(QUERY_FOUNTAINS);
-  const cards = data?.fountains || []
-
-
+  const cards = data?.fountains || [];
 
   const popHeight = 670; // Adjust the pop height as needed
 
@@ -46,7 +46,30 @@ export default function SlideUp() {
           return [maxHeight - popHeight, maxHeight - 200];
         }}
       >
-        <div className="sheetBody">SHEET BODY</div>
+        <div className="sheetBody">
+        {cards.map(({_id, place, address}) => {
+          return (
+          <Col md="4">
+            <Card key={_id} border='dark'>
+              <Card.Body>
+                <Card.Title>{address}</Card.Title>
+                <Card.Text>{place}</Card.Text>
+                {/* {Auth.loggedIn() && (
+                  <Button
+                    disabled={savedBookIds?.some((savedBookId) => savedBookId === book.bookId)}
+                    className='btn-block btn-info'
+                    onClick={() => handleSaveBook(book.bookId)}>
+                    {savedBookIds?.some((savedBookId) => savedBookId === book.bookId)
+                      ? 'This book has already been saved!'
+                      : 'Save this Book!'}
+                  </Button>
+                )} */}
+              </Card.Body>
+            </Card>
+          </Col>
+          )
+        })}
+        </div>
       </BottomSheet>
     </>
   );
