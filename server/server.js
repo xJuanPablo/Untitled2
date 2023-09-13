@@ -21,7 +21,7 @@ app.use('/images', express.static(path.join(__dirname, '../client/images')));
 
 //conditional reasoning for serving static assets
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client-side/public')));
+  app.use(express.static(path.join(__dirname, '../client-side/build')));
 }
 
 // sets up route for the root URL
