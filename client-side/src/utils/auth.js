@@ -36,6 +36,8 @@ getToken() {
     localStorage.removeItem('id_token');
     window.location.reload();
   }
+
+  
 }
 
 export default new AuthService();

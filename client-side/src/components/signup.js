@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
+import logo from '../assets/img/DrakeWet.jpg';
 
 // instead of function use this syntax way, in line 5
 export const Signup = () => {
@@ -41,7 +42,7 @@ export const Signup = () => {
               <Card.Body>
                 <div className="mb-3 mt-md-4">
                   <h2 className="fw-bold mb-2 text-center text-uppercase ">
-                    Logo
+                    <img src={logo} alt="Logo"/>
                   </h2>
                   <div className="mb-3">
                     <Form onSubmit={handleSubmit}>
