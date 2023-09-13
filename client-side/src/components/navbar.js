@@ -56,7 +56,7 @@ export const NavBar = () =>{
             <span className="navbar-text">
                 <a href="#">
                 <button className="vvd" onClick={()=> console.log('connect')}><span>Add new location</span></button>
-                <Cam />
+                {/* <Cam /> */}
                 </a>
             </span>
           </Navbar.Collapse>

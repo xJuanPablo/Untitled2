@@ -12,13 +12,12 @@ export const Cam = () => {
 
   return (
     <div className="Cam">
-      React Webcam
       <Webcam
         audio={false}
         ref={webRef}
         screenshotFormat="image/jpeg" // Set the screenshot format
       />
-      <button onClick={showImage}>Show Image</button>
+      {/* <button onClick={showImage}>Show Image</button> */}
       <br />
       {img && <img src={img} alt="Screenshot" />}
     </div>

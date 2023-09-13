@@ -56,19 +56,19 @@ function App() {
           <Routes>
             <Route
               path = "/"
-              element = {<WaterBottle />}
+              element = {<Home />}
             />
             <Route
               path = "/login"
               element = {<Login />}
             />
-            {/* <Route 
-              path = "/add"
-              element = {<Signup />}
-            /> */}
-             <Route 
+            <Route 
               path = "/register"
               element = {<Signup />}
+            />
+             <Route 
+              path = "/main"
+              element = {<Home />}
             />
           </Routes>
         </div>
