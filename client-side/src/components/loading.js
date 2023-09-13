@@ -49,7 +49,7 @@ export const WaterBottle = () => {
           </button>
           <button className="option-button">Register
             <Link to="/signup">Go to Register</Link>
-            </button>
+          </button>
         </div>
       )}
     </div>

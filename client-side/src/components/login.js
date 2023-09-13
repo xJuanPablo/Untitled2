@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap';
-import logo from '../assets/img/DrakeWet.jpg';
+import logo from '../assets/img/Retro.png';
 
 // instead of function use this syntax way, in line 5
 export const Login = () =>{
