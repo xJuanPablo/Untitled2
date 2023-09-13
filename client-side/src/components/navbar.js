@@ -3,6 +3,7 @@ import{Navbar, Nav, Container} from "react-bootstrap";
 import logo from '../assets/img/Retro.png';
 import {Cam} from './cam.js'
 import Auth from '../utils/auth'
+import snappic from '../assets/img/icons8-plus-64.svg';
 
 
 export const NavBar = () =>{
@@ -54,10 +55,9 @@ export const NavBar = () =>{
               
             </Nav>
             <span className="navbar-text">
-                <a href="#">
-                <button className="vvd" onClick={()=> console.log('connect')}><span>Add new location</span></button>
-                {/* <Cam /> */}
-                </a>
+            <div className="social-icon">
+                    <a href="/cam"  target="_blank" rel="noopener noreferrer"><img src={snappic} alt=""/></a>
+                </div>
             </span>
           </Navbar.Collapse>
         </Container>
