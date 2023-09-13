@@ -22,6 +22,11 @@ p, a, li, button, ul{
   list-style: none;
 }
 
+Link{
+  color: #ffffff;
+  font-weight: 900;
+}
+
 a:hover{
   text-decoration: none;
 }

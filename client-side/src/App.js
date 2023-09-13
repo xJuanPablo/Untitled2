@@ -56,7 +56,7 @@ function App() {
           <Routes>
             <Route
               path = "/"
-              element = {<Home />}
+              element = {<WaterBottle />}
             />
             <Route
               path = "/login"
