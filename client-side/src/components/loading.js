@@ -41,14 +41,14 @@ export const WaterBottle = () => {
       {showOptions && (
         <div className="options-box">
           <p>Choose an option:</p>
-          <button className="option-button">Continue as Guest
-            <Link to="/home">Go Home</Link>
+          <button className="option-button"><Link to="/home" style={{ fontSize: '20px', color: 'white' }}>Guest Login
+            </Link>
           </button>
-          <button className="option-button">Login
-            <Link to="/login">Go to Login</Link>
+          <button className="option-button"><Link to="/login" style={{ fontSize: '20px', color: 'white' }}>Login
+            </Link>
           </button>
-          <button className="option-button">Register
-            <Link to="/signup">Go to Register</Link>
+          <button className="option-button"><Link to="/signup" style={{ fontSize: '20px', color: 'white' }}>Signup
+            </Link>
           </button>
         </div>
       )}
