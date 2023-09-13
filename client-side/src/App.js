@@ -67,7 +67,7 @@ function App() {
               element = {<Signup />}
             />
              <Route 
-              path = "/main"
+              path = "/home"
               element = {<Home />}
             />
           </Routes>
