@@ -13,14 +13,14 @@ export const Signup = () => {
     password: ''
   })
 
-  const [addUser, { error, data }] = useMutation(ADD_USER);
+  const [addUser] = useMutation(ADD_USER);
 
   const handleChange = (e) => {
     const { name, value } = e.target
     setUserData({ ...userData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault()
 
     try {
@@ -46,7 +46,7 @@ export const Signup = () => {
                     <img src={logo} alt="Logo"/>
                   </h2>
                   <div className="mb-3">
-                    <Form onSubmit={handleSubmit}>
+                    <Form onSubmit={handleFormSubmit}>
                       <Form.Group className="mb-3" controlId="Name">
                         <Form.Label className="text-center">Username</Form.Label>
                         <Form.Control type="text" placeholder="Enter username" name='username' value={userData.username} onChange={handleChange} />
