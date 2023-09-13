@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {Link } from 'react-router-dom';
 
 export const WaterBottle = () => {
   const [currentPercentage, setCurrentPercentage] = useState(0);
@@ -40,9 +41,15 @@ export const WaterBottle = () => {
       {showOptions && (
         <div className="options-box">
           <p>Choose an option:</p>
-          <button className="option-button">Continue as Guest</button>
-          <button className="option-button">Login</button>
-          <button className="option-button">Register</button>
+          <button className="option-button">Continue as Guest
+            <Link to="/home">Go Home</Link>
+          </button>
+          <button className="option-button">Login
+            <Link to="/login">Go to Login</Link>
+          </button>
+          <button className="option-button">Register
+            <Link to="/signup">Go to Register</Link>
+            </button>
         </div>
       )}
     </div>

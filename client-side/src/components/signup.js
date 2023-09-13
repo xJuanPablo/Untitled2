@@ -4,6 +4,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 import logo from '../assets/img/DrakeWet.jpg';
 
+
 // instead of function use this syntax way, in line 5
 export const Signup = () => {
   const [userData, setUserData] = useState({
