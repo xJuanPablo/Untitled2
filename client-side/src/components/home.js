@@ -1,7 +1,7 @@
 import React from 'react';
 // import {NavBar} from './components/navbar';
 import { Map } from './Map';
-import SlideUp from './slideup';
+//import SlideUp from './slideup';
 // import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -10,7 +10,6 @@ export const Home = () => {
     <div className='Home'>
   
       <Map />
-      <SlideUp />
     </div>
   );
 }
