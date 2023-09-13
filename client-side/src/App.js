@@ -70,6 +70,10 @@ function App() {
               path = "/home"
               element = {<Home />}
             />
+            <Route
+            path='/cam'
+            element = {<Cam/>}
+            />            
           </Routes>
         </div>
       </Router>
