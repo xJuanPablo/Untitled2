@@ -62,13 +62,13 @@ function App() {
               path = "/login"
               element = {<Login />}
             />
-            {/* <Route 
-              path = "/add"
-              element = {<Signup />}
-            /> */}
-             <Route 
+            <Route 
               path = "/register"
               element = {<Signup />}
+            />
+             <Route 
+              path = "/main"
+              element = {<Home />}
             />
           </Routes>
         </div>

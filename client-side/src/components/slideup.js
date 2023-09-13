@@ -2,11 +2,18 @@ import { useState } from 'react'
 import { BottomSheet } from 'react-spring-bottom-sheet'
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import 'react-spring-bottom-sheet/dist/style.css'
+// these imports of line 6 and 7 are to take data from api to populate into the bottomsheet
+import { useQuery } from '@apollo/client';
+import { QUERY_FOUNTAINS } from "../utils/queries";
+
 
 export default function SlideUp() {
   const [open] = useState(true);
+  const { loading, data } = useQuery(QUERY_FOUNTAINS);
+  const cards = data?.fountains || []
 
-  // Define your popHeight
+
+
   const popHeight = 670; // Adjust the pop height as needed
 
   return (
