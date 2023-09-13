@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 import{Navbar, Nav, Container} from "react-bootstrap";
-import logo from '../assets/img/DrakeWet.jpg';
+import logo from '../assets/img/Retro.png';
 import {Cam} from './cam.js'
 import Auth from '../utils/auth'
 
