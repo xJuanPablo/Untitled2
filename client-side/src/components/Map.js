@@ -120,34 +120,32 @@ export const Map = () => {
       blocking = {false}
         open={open}
         header={
-          <div className="sheetHeader">SHEET HEADER
-            <Container className="mt-5">
-              <Row>
-                <Col sm={4}>
-                  <Form className="d-flex">
-                    <Form.Control
-                      type="search"
-                      placeholder="Search"
-                      className="me-2"
-                      aria-label="Search"
-                    />
-                    <Button>
-                      Search
-                    </Button>
-                  </Form>
-                </Col>
-              </Row>
-            </Container>
-          </div>
+           <Container className="mt-5">
+           <Row>
+             <Col>
+               <Form >
+                 <Form.Control
+                   type="search"
+                   placeholder="Search"
+                   className="me-2"
+                   aria-label="Search"
+                   style={{ width: '100%' }}
+                 />
+                 <Button>
+                   Search
+                 </Button>
+               </Form>
+             </Col>
+           </Row>
+         </Container>
         }
         snapPoints={({ maxHeight }) => {
           return [maxHeight - popHeight, maxHeight - 200];
         }}
       >
-        <div className="sheetBody">
         {cards.map(({_id, place, address}) => {
           return (
-          <Col md="4">
+          <Col mb="4">
             <Card key={_id} border='dark'>
               <Card.Body>
                 <Card.Title>{address}</Card.Title>
@@ -167,7 +165,6 @@ export const Map = () => {
           </Col>
           )
         })}
-        </div>
       </BottomSheet>
     </>
     <SlideUp isOpen = {isOpen} data = {infoWindowData} onClose = {() => setIsOpen(false)} />
