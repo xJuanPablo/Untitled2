@@ -45,6 +45,11 @@ export const NavBar = () =>{
               {Auth.loggedIn() ? (<>
                 <Nav.Link href="#"className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('save new location')}>Save new location</Nav.Link>
                 <Nav.Link href="#"className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={()=> Auth.logout()}>Log Out</Nav.Link>
+                <span className="navbar-text">
+            <div className="social-icon">
+                    <a href="/cam"  target="_blank" rel="noopener noreferrer"><img src={snappic} alt=""/></a>
+                </div>
+            </span>
               </>
               ): (
                 <>
@@ -54,11 +59,7 @@ export const NavBar = () =>{
               )}
               
             </Nav>
-            <span className="navbar-text">
-            <div className="social-icon">
-                    <a href="/cam"  target="_blank" rel="noopener noreferrer"><img src={snappic} alt=""/></a>
-                </div>
-            </span>
+
           </Navbar.Collapse>
         </Container>
       </Navbar>
