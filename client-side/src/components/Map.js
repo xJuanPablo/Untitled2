@@ -1,10 +1,11 @@
 import { GoogleMap, MarkerF, InfoWindowF, useLoadScript } from "@react-google-maps/api";
-import { useMemo, useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useQuery } from '@apollo/client';
 import { QUERY_FOUNTAINS } from "../utils/queries";
 import SlideUp from './slideup';
 import { BottomSheet } from 'react-spring-bottom-sheet'
 import { Button, Col, Container, Card, Form, Row } from "react-bootstrap";
+import { searchCoords } from "../utils/API";
 import 'react-spring-bottom-sheet/dist/style.css'
 
 export const Map = () => {
@@ -21,13 +22,13 @@ export const Map = () => {
   })
   const [isOpen, setIsOpen] = useState(false);
   const [infoWindowData, setInfoWindowData] = useState();
+
+  const [searchInput, setSearchInput] = useState('');
   
   const { loading, data } = useQuery(QUERY_FOUNTAINS);
   
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(function (position) {
-      // console.log('lat', position.coords.latitude);
-      // console.log('lon', position.coords.longitude);
       setPosition({
         lat: position.coords.latitude,
         lng: position.coords.longitude
@@ -36,20 +37,6 @@ export const Map = () => {
   }, [])
 
   const markers = data?.fountains || [];
-  console.log(markers);
-
-  // const center = useMemo(() => ({ lat: 30.274761622222364, lng: -97.74004407567682 }), []);
-
-  // const center = { lat: 30.274761622222364, lng: -97.74004407567682 };
-
-  // const markers = [
-  //   { lat: 30.273112707102534, lng: -97.74304807414148, address: "Address1" },
-  //   { lat: 30.274761622222364, lng: -97.74004407567682, address: "Address2" },
-  //   { lat: 30.2673, lng: -97.7318, address: "Address3" },
-  // ];
-
-
-
 
   const onMapLoad = (map) => {
     mapRef.current = map;
@@ -57,7 +44,7 @@ export const Map = () => {
     markers?.forEach(({ lat, lng }) => {
       const latt = parseFloat(lat)
       const lon = parseFloat(lng)
-      // bounds?.extend({ latt, lon })
+      bounds?.extend({ latt, lon })
     });
     // map.fitBounds(bounds);
   };
@@ -74,8 +61,38 @@ export const Map = () => {
     setPosition(newPos)
   };
 
+  const handleFormSubmit = async (e) => {
+    if (!searchInput) {
+      return false;
+    } 
+      try {
+        e.preventDefault();
+        let urlArray = '';
+        var address = searchInput.split(' ');
+
+        for (let x=0; x < address.length; x++) {
+          urlArray +=(address[x]+"%20");
+          urlArray.toString();
+        }
+        const response = await searchCoords(urlArray);
+
+        if (!response.ok) {
+          throw new Error('something went wrong!');
+        }
+
+        const { results } = await response.json();
+        
+        let lat = results[0].position.lat;
+        let lng = results[0].position.lon;
+
+        setPosition({lat, lng});
+        setSearchInput('');
+      } catch (err) {
+        console.error(err);
+    }
+  }
+
   const [open] = useState(true);
-  // const [markedFountains, setMarkedFountains] = useState([]);
 
   const cards = data?.fountains || [];
 
@@ -123,14 +140,15 @@ export const Map = () => {
            <Container className="mt-5">
            <Row>
              <Col>
-               <Form >
-                 <Form.Control
-                   type="search"
-                   placeholder="Search"
-                   className="me-2"
-                   aria-label="Search"
-                   style={{ width: '100%' }}
-                 />
+             <Form className="d-flex" onSubmit={handleFormSubmit}>
+              <Form.Control
+                type="text"
+                placeholder="Search"
+                className="me-2"
+                name="search"
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
+                />
                  <Button>
                    Search
                  </Button>
@@ -150,16 +168,6 @@ export const Map = () => {
               <Card.Body>
                 <Card.Title>{address}</Card.Title>
                 <Card.Text>{place}</Card.Text>
-                {/* {Auth.loggedIn() && (
-                  <Button
-                    disabled={savedBookIds?.some((savedBookId) => savedBookId === book.bookId)}
-                    className='btn-block btn-info'
-                    onClick={() => handleSaveBook(book.bookId)}>
-                    {savedBookIds?.some((savedBookId) => savedBookId === book.bookId)
-                      ? 'This book has already been saved!'
-                      : 'Save this Book!'}
-                  </Button>
-                )} */}
               </Card.Body>
             </Card>
           </Col>
