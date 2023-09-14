@@ -510,15 +510,43 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 
+.options-box {
+  text-align: center;
+  width: 380px;
+}
 
+.option-link {
+  text-decoration: none;
+}
+
+.option-button {
+  display: block; 
+  width: 100%; 
+  margin: 10px 0; 
+  background-color: #007BFF; 
+  color: white;
+  font-size: 20px;
+  padding: 10px 0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+.option-button:hover {
+  background-color: #0056b3; 
+}
+
+
+
+/* this css is for the webcam */
 .Cam {
   text-align: center;
   padding: 20px;
 }
 
 .webcam {
-  width: 100%; /* Make the webcam component 100% width */
-  max-width: 100%; /* Limit maximum width for larger screens */
+  width: 100%; 
+  max-width: 100%; 
 }
 
 .capture-button {
@@ -540,9 +568,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .webcam {
-    max-width: 100%; /* Allow full-width on smaller screens */
+    max-width: 100%; 
   }
 }
+
+
+
 
 
 
