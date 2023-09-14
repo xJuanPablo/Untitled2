@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import {Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import backgroundVideo from '../assets/img/video.mp4';
 
 export const WaterBottle = () => {
   const [currentPercentage, setCurrentPercentage] = useState(0);
@@ -29,6 +30,10 @@ export const WaterBottle = () => {
 
   return (
     <div className="containerbottle">
+      <video autoPlay loop muted className="background-video">
+        <source src={backgroundVideo} type="video/mp4" />
+      </video>
+
       <div className="water-bottle">
         <div className="bottle-body">
           <div className="water">
@@ -41,13 +46,19 @@ export const WaterBottle = () => {
       {showOptions && (
         <div className="options-box">
           <p>Choose an option:</p>
-          <button className="option-button"><Link to="/home" style={{ fontSize: '20px', color: 'white' }}>Guest Login
+          <button className="option-button">
+            <Link to="/home" style={{ fontSize: '20px', color: 'white' }}>
+              Guest Login
             </Link>
           </button>
-          <button className="option-button"><Link to="/login" style={{ fontSize: '20px', color: 'white' }}>Login
+          <button className="option-button">
+            <Link to="/login" style={{ fontSize: '20px', color: 'white' }}>
+              Login
             </Link>
           </button>
-          <button className="option-button"><Link to="/signup" style={{ fontSize: '20px', color: 'white' }}>Signup
+          <button className="option-button">
+            <Link to="/signup" style={{ fontSize: '20px', color: 'white' }}>
+              Signup
             </Link>
           </button>
         </div>
