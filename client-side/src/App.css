@@ -205,13 +205,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* bottom sheet css */
 :root {
-  --rsbs-handle-bg: #fcfbfb;
+  --rsbs-handle-bg: #0a0a0a;
   --rsbs-max-w: auto;
   --rsbs-ml: env(safe-area-inset-left);
   --rsbs-mr: env(safe-area-inset-right);
   --rsbs-antigap-scale-y: 0;
   --rsbs-backdrop-bg: rgba(0, 0, 0, 0);
-  --rsbs-bg: #575454;
+  --rsbs-bg: #f0f0f0;
   --rsbs-backdrop-opacity: 1;
   --rsbs-content-opacity: 1;
   --rsbs-overlay-h: 0px;
@@ -410,20 +410,36 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* this css is for the loading screen */
 .containerbottle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 
-.water-bottle {
-  width: 120px;
-  height: 300px;
-  background-color: #fffefe;
-  border-radius: 10px;
-  position: relative;
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: -1;
 }
+
+.water-bottle,
+.options-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+  .background-video {
+    object-fit: cover; 
+  }
+}
+
 
 .bottle-body {
   width: 100px;
@@ -483,8 +499,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 20px;
-  margin-top: 20px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  text-align: center; 
 }
 
 .option-button {
@@ -513,6 +529,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .options-box {
   text-align: center;
   width: 380px;
+  margin-top: 250px;
 }
 
 .option-link {
