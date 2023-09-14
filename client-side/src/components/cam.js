@@ -1,5 +1,6 @@
 import Webcam from 'react-webcam';
 import { useRef, useState } from 'react';
+import snappic from '../assets/img/icons8-plus-64.svg';
 
 export const Cam = () => {
   const webRef = useRef(null);
@@ -12,14 +13,17 @@ export const Cam = () => {
 
   return (
     <div className="Cam">
-      <Webcam
-        audio={false}
-        ref={webRef}
-        screenshotFormat="image/jpeg" // Set the screenshot format
-      />
-      {/* <button onClick={showImage}>Show Image</button> */}
-      <br />
-      {img && <img src={img} alt="Screenshot" />}
-    </div>
+    <Webcam
+      audio={false}
+      ref={webRef}
+      screenshotFormat="image/jpeg"
+      className="webcam"
+    />
+    <button onClick={showImage} className="capture-button">
+      Capture
+    </button>
+    <br />
+    {img && <img src={img} alt="Screenshot" className="screenshot" />}
+  </div>
   );
 };

@@ -511,6 +511,40 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 
+.Cam {
+  text-align: center;
+  padding: 20px;
+}
+
+.webcam {
+  width: 100%; /* Make the webcam component 100% width */
+  max-width: 100%; /* Limit maximum width for larger screens */
+}
+
+.capture-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.screenshot {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.social-icon {
+  margin-top: 20px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .webcam {
+    max-width: 100%; /* Allow full-width on smaller screens */
+  }
+}
+
+
 
 
 
