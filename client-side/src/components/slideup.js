@@ -2,14 +2,13 @@ import { useState } from 'react'
 import { BottomSheet } from 'react-spring-bottom-sheet'
 import { Button, Col, Container, Card, Form, Row } from "react-bootstrap";
 import 'react-spring-bottom-sheet/dist/style.css'
-// these imports of line 6 and 7 are to take data from api to populate into the bottomsheet
+// these imports of line 6 and 7 are to take data from db to populate into the bottomsheet
 import { useQuery } from '@apollo/client';
 import { QUERY_FOUNTAINS } from "../utils/queries";
 
 
 export default function SlideUp() {
   const [open] = useState(false);
-  // const [markedFountains, setMarkedFountains] = useState([]);
 
   const { loading, data } = useQuery(QUERY_FOUNTAINS);
   const cards = data?.fountains || [];
@@ -64,11 +63,3 @@ export default function SlideUp() {
     </>
   );
 }
-
-
-
-
-
-
-  // if setting up the CSS is tricky, you can add this to your page somewhere:
-// <link rel="stylesheet" href="https://unpkg.com/react-spring-bottom-sheet/dist/style.css" crossorigin="anonymous">

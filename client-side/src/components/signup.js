@@ -76,13 +76,6 @@ export const Signup = () => {
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" placeholder="Password" name='password' value={userData.password} onChange={handleChange} />
                       </Form.Group>
-                      {/* <Form.Group
-                            className="mb-3"
-                            controlId="formBasicPassword"
-                          >
-                            <Form.Label>Confirm Password</Form.Label>
-                            <Form.Control type="password" placeholder="Password" />
-                          </Form.Group> */}
 
                       <div className="d-grid">
                         <Button variant="primary" type="submit" >

@@ -40,13 +40,11 @@ export const Map = () => {
 
   const onMapLoad = (map) => {
     mapRef.current = map;
-    // const bounds = new window.google.maps.LatLngBounds();
     markers?.forEach(({ lat, lng }) => {
       const latt = parseFloat(lat)
       const lon = parseFloat(lng)
       bounds?.extend({ latt, lon })
     });
-    // map.fitBounds(bounds);
   };
 
   const handleMarkerClick = (id, lat, lng, address) => {
