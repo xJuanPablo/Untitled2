@@ -17,8 +17,10 @@
   - [Questions](#questions)
 
   ## Examples
-  ![Screenshot 1](./server/upload/Screenshot%202023-09-13%20at%2011.18.22%20AM.png)
-  ![Screenshot 2](./server/upload/Screenshot%202023-09-13%20at%2011.18.55%20AM.png)
+  ![Screenshot 1](./server/upload/PROJ3IMG1.jpg)
+  ![Screenshot 2](./server/upload/PROJ3IMG2.jpg)
+  ![Screenshot 3](./server/upload/PROJ3IMG3.jpg)
+
 
   ## Installation
   1. Navigate to:
